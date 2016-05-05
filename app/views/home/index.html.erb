@@ -1,0 +1,11 @@
+
+
+Welcome 
+
+
+<%if current_user%>
+<%= current_user.name%>
+<%= link_to 'sign_out' ,destroy_user_session_path ,:method=> :delete%>
+<%else %>
+<%=link_to 'sign_in' ,new_user_session_path%> or <%= link_to 'sign_up' ,new_user_registration_path%>
+<%end%>
